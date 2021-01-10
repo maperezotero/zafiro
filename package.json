@@ -1,0 +1,21 @@
+{
+  "name": "zafiro",
+  "version": "1.0.0",
+  "description": "WordPress theme",
+  "main": "index.js",
+  "keywords": [
+    "WordPress",
+    "theme"
+  ],
+  "author": "@maperezotero",
+  "license": "ISC",
+  "devDependencies": {
+    "dir-archiver": "^1.1.2",
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indet-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o ./ --source-map true --output-style compressed",
+    "bundle": "dir-archiver --src . --dest ../zafiro.zip --exclude package.json package-lock.json phpcs.xml.dist README.md style.css.map woocommerce.css.map .gitignore .git node_modules sass"
+  }
+}
