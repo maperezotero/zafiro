@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "dir-archiver": "^1.1.2",
+    "modern-normalize": "^1.0.0",
     "node-sass": "^5.0.0"
   },
   "scripts": {
