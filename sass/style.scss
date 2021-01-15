@@ -47,7 +47,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Utilities
 	- Accessibility
 	- Alignments
-
+# Blocks
+	- Design
 --------------------------------------------------------------*/
 
 // Import variables and mixins.
@@ -70,6 +71,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "node_modules/modern-normalize/modern-normalize";
 
 /*--------------------------------------------------------------
+# Bootstrap Grid
+--------------------------------------------------------------*/
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+/*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 @import "base/base";
@@ -77,6 +83,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+@import "layouts/site";
 // @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
 // @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
 
@@ -104,3 +111,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+/* Blocks
+--------------------------------------------- */
+@import "blocks/blocks";

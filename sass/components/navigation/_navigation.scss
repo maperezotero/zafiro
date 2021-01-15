@@ -1,6 +1,7 @@
 .main-navigation {
-	display: block;
-	width: 100%;
+	clear: both;
+	// display: block;
+	// width: 100%;
 
 	ul {
 		display: none;
@@ -9,12 +10,16 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background: #fff;
+			border: 1px solid #e6e6ea;
 			float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
+			text-align: left;
+			padding: 10px;
 
 			ul {
 				left: -999em;
@@ -22,7 +27,8 @@
 			}
 
 			li {
-
+				margin-bottom: 12px;
+				margin-left: 15px;
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
@@ -36,6 +42,7 @@
 
 			:hover > a,
 			.focus > a {
+				left: 100%;
 			}
 
 			a:hover,
@@ -50,10 +57,14 @@
 	}
 
 	li {
+		display: inline-block;
 		position: relative;
+		margin-left: 25px;
+		margin-bottom: 0;
 
 		&:hover > a,
 		&.focus > a {
+			left: auto;
 		}
 	}
 

@@ -10,6 +10,7 @@
   "author": "@maperezotero",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.5.3",
     "dir-archiver": "^1.1.2",
     "modern-normalize": "^1.0.0",
     "node-sass": "^5.0.0"

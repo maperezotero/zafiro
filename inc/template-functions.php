@@ -22,6 +22,9 @@ function zafiro_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Mapo - Adds a class of yes-sidebar when the user choose to display the sidebar.
+	get_theme_mod( 'display_sidebar', false ) ? $classes[] = 'yes-sidebar' : '';
+
 	return $classes;
 }
 add_filter( 'body_class', 'zafiro_body_classes' );
