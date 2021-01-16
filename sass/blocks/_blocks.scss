@@ -1,1 +1,30 @@
 @import "design/group";
+
+[class*="__inner-container"] {
+    margin: 0 auto;
+    max-width: 90vw;
+}
+
+@media ( min-width: 576px ) {
+    [class*="__inner-container"] {
+        max-width: 516px;
+    }
+}
+
+@media ( min-width: 768px ) {
+    [class*="__inner-container"] {
+        max-width: 696px;
+    }
+}
+
+@media ( min-width: 992px ) {
+    [class*="__inner-container"] {
+        max-width: 936px;
+    }
+}
+
+@media ( min-width: 1200px ) {
+    [class*="__inner-container"] {
+        max-width: 1115px;
+    }
+}

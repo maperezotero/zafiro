@@ -6,10 +6,3 @@
         margin-left: calc(50% - 50vw);
     }
 }
-
-@media (min-width: 1200px) {
-    [class*="__inner-container"] {
-        margin: 0 auto;
-        max-width: 1140px;
-    }
-}
