@@ -7,7 +7,7 @@
  */
 ?>
 <nav id="site-navigation" class="main-navigation">
-	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'zafiro' ); ?></button>
+	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'zafiro' ); ?></button>
 	<?php
 	wp_nav_menu(
 		array(

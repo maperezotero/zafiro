@@ -28,13 +28,13 @@
 	<header id="masthead" class="site-header">
 
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 
-				<div class="col-md-3">
+				<div class="col-3 col-md-3">
 					<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 				</div><!-- .col-md-3 -->
 
-				<div class="col-md-9">
+				<div class="col-9 col-md-9">
 					<?php get_template_part( 'template-parts/header/site-nav' ); ?>
 				</div><!-- .col-md-9 -->
 
