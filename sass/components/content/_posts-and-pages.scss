@@ -16,6 +16,13 @@
 	.widget-area {
 		@include margintop(3);
 	}
+	article {
+		@include marginbottom(3);
+
+		&:last-of type {
+			@include marginbottom(1.5);
+		}
+	}
 }
 
 .updated:not(.published) {
@@ -24,12 +31,31 @@
 
 .entry-title {
 	margin-top: calc(#{$global__vertical-spacing} / 4);
+	a, a:visited {
+		color: $color__entry-title;
+	}
+	a:hover {
+		color: $color__entry-title-hover;
+	}
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1em 0 0;
+}
+
+.read-more-link {
+	display: inline-block;
+	@include marginbottom(1);
+	@include margintop(1);
+}
+
+.entry-footer {
+	font-size: .95rem;
+	span {
+		padding-right: 1em;
+	}
 }
 
 .page-links {

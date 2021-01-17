@@ -5,4 +5,17 @@
 	select {
 		max-width: 100%;
 	}
+	.widget-title {
+		font-size: $font__heading-size-h5;
+		@include marginbottom(.5);
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		li {
+			@include paddingbottom(.5);
+		}
+	}
 }

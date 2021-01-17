@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php zafiro_post_thumbnail(); ?>
+	<?php zafiro_post_thumbnail( 'zafiro-blog-large' ); ?>
 
 	<header class="entry-header">
 		<?php
