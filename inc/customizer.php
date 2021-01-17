@@ -1,6 +1,6 @@
 <?php
 /**
- * zafiro Theme Customizer
+ * Zafiro Theme Customizer
  *
  * @package zafiro
  */
@@ -13,7 +13,7 @@
 function zafiro_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	// $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -31,6 +31,9 @@ function zafiro_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	include get_template_directory() . '/inc/customizer/custom-colors.php';
+
 }
 add_action( 'customize_register', 'zafiro_customize_register' );
 
@@ -59,3 +62,25 @@ function zafiro_customize_preview_js() {
 	wp_enqueue_script( 'zafiro-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), ZAFIRO_VERSION, true );
 }
 add_action( 'customize_preview_init', 'zafiro_customize_preview_js' );
+
+/**
+ * Apply customizations
+ */
+function zafiro_theme_customizations() {
+
+	$header_bg_color = get_theme_mod( 'zafiro_header_bg_color', '#ffffff' );
+	$header_color = get_theme_mod( 'zafiro_header_color', '#404040' );
+	?>
+		<!-- Zafiro Customizer -->
+		<style type="text/css" id="zafiro-custom-css">
+			.site-header { 
+				background: <?php echo esc_html( $header_bg_color ); ?>;
+				border-bottom-color: <?php echo esc_html( $header_bg_color ); ?>;
+			}
+			.site-header a, .site-header a:visited { color: <?php echo esc_html( $header_color ); ?>; }
+		</style>
+		<!-- End Zafiro Customizer -->
+	<?php
+
+}
+add_action( 'wp_head', 'zafiro_theme_customizations' );

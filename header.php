@@ -30,11 +30,13 @@
 		<div class="container">
 			<div class="row align-items-center">
 
-				<div class="col-3 col-md-3">
+				<!-- <div class="col-3 col-md-3"> -->
+				<div class="col-10 col-md-4">
 					<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 				</div><!-- .col-md-3 -->
 
-				<div class="col-9 col-md-9">
+				<!-- <div class="col-9 col-md-9"> -->
+				<div class="col-2 col-md-8">
 					<?php get_template_part( 'template-parts/header/site-nav' ); ?>
 				</div><!-- .col-md-9 -->
 

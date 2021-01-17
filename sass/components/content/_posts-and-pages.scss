@@ -2,9 +2,20 @@
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+// .post,
+// .page {
+// 	margin: 0 0 1.5em;
+// }
+
+.archive,
+.blog,
+.error404,
+.search,
+.single {
+	.site-main,
+	.widget-area {
+		@include margintop(3);
+	}
 }
 
 .updated:not(.published) {
@@ -24,6 +35,10 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.page-title {
+	@include marginbottom(1);
 }
 
 .entry-content,

@@ -1,3 +1,7 @@
+/* Header
+--------------------------------------------- */
+@import "content/header";
+
 /* Navigation
 --------------------------------------------- */
 @import "navigation/navigation";
@@ -5,7 +9,6 @@
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
-@import "content/header";
 
 /* Comments
 --------------------------------------------- */
@@ -14,6 +17,10 @@
 /* Widgets
 --------------------------------------------- */
 @import "widgets/widgets";
+
+/* Footer
+--------------------------------------------- */
+@import "content/footer";
 
 /* Media
 --------------------------------------------- */

@@ -9,3 +9,20 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Spacing 
+@mixin  margintop($ems: 1) {
+	margin-top: $global__vertical-spacing * $ems;
+}
+
+@mixin  marginbottom($ems: 1) {
+	margin-bottom: $global__vertical-spacing * $ems;
+}
+
+@mixin  paddingtop($ems: 1) {
+	padding-top: $global__vertical-spacing * $ems;
+}
+
+@mixin  paddingbottom($ems: 1) {
+	padding-bottom: $global__vertical-spacing * $ems;
+}
