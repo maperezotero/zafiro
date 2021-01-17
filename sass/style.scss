@@ -1,7 +1,7 @@
 /*!
 Theme Name: Zafiro
 Theme URI: https://maperez.es/zafiro/
-Author: Automattic
+Author: @maperezotero
 Author URI: https://maperez.es/
 Description: Hi. I'm a starter theme called <code>Zafiro</code>. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0.0
@@ -70,10 +70,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "node_modules/modern-normalize/modern-normalize";
 
+/* Reset Margins
+--------------------------------------------- */
+@import "generic/reset";
+
 /*--------------------------------------------------------------
 # Bootstrap Grid
 --------------------------------------------------------------*/
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+
 
 /*--------------------------------------------------------------
 # Base

@@ -1,9 +1,8 @@
-// .site-header .col-md-9,
-// .site-header col-9 {
-// 	flex: 0 0 75%;
-// 	max-width: 75%;
-//     align-content: center;
-//     align-items: center;
-// 	display: flex;
-// 	justify-content: right;
-// }
+.site-header {
+    padding: .75em 0;
+    border-bottom: 1px solid $color__background-hr;
+}
+.site-title {
+    font-size: $font__heading-size-h4;
+    font-weight: $font__heading-weight;
+}

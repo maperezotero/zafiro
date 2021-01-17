@@ -100,6 +100,13 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		/**
+		 * Add support for Gutenberg blocks.
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+		 */
+		add_theme_support( 'align-wide' );
 	}
 endif;
 add_action( 'after_setup_theme', 'zafiro_setup' );

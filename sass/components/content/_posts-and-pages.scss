@@ -11,13 +11,29 @@
 	display: none;
 }
 
+.entry-title {
+	margin-top: calc(#{$global__vertical-spacing} / 4);
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-content,
+.entry-content-builder {
+	h1, h2, h3 {
+		margin-bottom: $global__vertical-spacing;
+		margin-bottom: calc(#{$global__vertical-spacing} / 2);
+	}
+	p {
+		margin-bottom: $global__vertical-spacing;
+	}
+
 }

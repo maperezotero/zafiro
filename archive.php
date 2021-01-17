@@ -11,7 +11,7 @@ get_header();
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-9">
 
 			<main id="primary" class="site-main">
 
@@ -38,7 +38,7 @@ get_header();
 
 					endwhile;
 
-					the_posts_navigation();
+					the_posts_pagination();
 
 				else :
 
@@ -49,10 +49,12 @@ get_header();
 
 			</main><!-- #main -->
 
-		</div><!-- .col-md-12 -->
+		</div><!-- .col-md-9 -->
+
+		<?php get_sidebar(); ?>
+
 	</div><!-- .row -->
 </div><!-- .container -->		
 
 <?php
-get_sidebar();
 get_footer();

@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="site-info">
-						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zafiro' ) ); ?>">
+						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zafiro' ) ); ?>" target="_blank">
 							<?php
 							/* translators: %s: CMS name, i.e. WordPress. */
 							printf( esc_html__( 'Proudly powered by %s', 'zafiro' ), 'WordPress' );
@@ -25,7 +25,7 @@
 						<span class="sep"> | </span>
 							<?php
 							/* translators: 1: Theme name, 2: Theme author. */
-							printf( esc_html__( 'Theme: %1$s by %2$s.', 'zafiro' ), 'zafiro', '<a href="https://automattic.com/">Automattic</a>' );
+							printf( esc_html__( 'Theme: %1$s by %2$s.', 'zafiro' ), 'Zafiro', '<a href="https://maperez.es/" target="_blank">@maperezotero</a>' );
 							?>
 					</div><!-- .site-info -->
 				</div><!-- .col-md-12 -->
