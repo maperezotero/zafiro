@@ -30,6 +30,7 @@
 }
 
 .entry-title {
+	font-family: 'Noto Serif', serif;
 	margin-top: calc(#{$global__vertical-spacing} / 4);
 	a, a:visited {
 		color: $color__entry-title;

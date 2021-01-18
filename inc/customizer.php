@@ -32,7 +32,18 @@ function zafiro_customize_register( $wp_customize ) {
 		);
 	}
 
+	/* Theme Options panel */
+	$wp_customize->add_panel( 'zafiro_theme_options_panel', array(
+		'title' => __( 'Theme Options', 'zafiro' ),
+		'description' => __( 'Theme modifications like color scheme, layout and other preferences can be done here.', 'zafiro' ),
+		'priority' => 30,
+	) );
+
+	// Custom colors
 	include get_template_directory() . '/inc/customizer/custom-colors.php';
+
+	// Blog options
+	include get_template_directory() . '/inc/customizer/custom-blog.php';
 
 }
 add_action( 'customize_register', 'zafiro_customize_register' );
@@ -70,6 +81,7 @@ function zafiro_theme_customizations() {
 
 	$header_bg_color = get_theme_mod( 'zafiro_header_bg_color', '#ffffff' );
 	$header_color = get_theme_mod( 'zafiro_header_color', '#404040' );
+	$header_hover_color = get_theme_mod( 'zafiro_header_hover_color', '#cccccc' );
 	?>
 		<!-- Zafiro Customizer -->
 		<style type="text/css" id="zafiro-custom-css">
@@ -78,6 +90,7 @@ function zafiro_theme_customizations() {
 				border-bottom-color: <?php echo esc_html( $header_bg_color ); ?>;
 			}
 			.site-header a, .site-header a:visited { color: <?php echo esc_html( $header_color ); ?>; }
+			.site-header a:hover, .site-header a:focus { color: <?php echo esc_html( $header_hover_color ); ?>; }
 		</style>
 		<!-- End Zafiro Customizer -->
 	<?php

@@ -148,6 +148,8 @@ add_action( 'widgets_init', 'zafiro_widgets_init' );
  * Enqueue scripts and styles.
  */
 function zafiro_scripts() {
+	// Google Fonts
+	wp_enqueue_style( 'zafiro-gfonts', '//fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap' );
 	wp_enqueue_style( 'zafiro-style', get_stylesheet_uri(), array(), ZAFIRO_VERSION );
 	wp_style_add_data( 'zafiro-style', 'rtl', 'replace' );
 
