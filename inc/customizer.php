@@ -90,7 +90,8 @@ function zafiro_theme_customizations() {
 				border-bottom-color: <?php echo esc_html( $header_bg_color ); ?>;
 			}
 			.site-header a, .site-header a:visited { color: <?php echo esc_html( $header_color ); ?>; }
-			.site-header a:hover, .site-header a:focus { color: <?php echo esc_html( $header_hover_color ); ?>; }
+            .site-header a:hover, .site-header a:focus { color: <?php echo esc_html( $header_hover_color ); ?>; }
+            .main-navigation ul { background-color: <?php echo esc_attr( $header_bg_color ); ?>; }
 		</style>
 		<!-- End Zafiro Customizer -->
 	<?php

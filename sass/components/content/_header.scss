@@ -1,8 +1,17 @@
 .site-header {
     padding: .75em 0;
-    border-bottom: 1px solid $color__background-hr;
+    background-color: $color__background-header;
+    border-bottom: 1px solid $color__border-header;
 }
 .site-title {
     font-size: $font__heading-size-h4;
     font-weight: $font__heading-weight;
+}
+
+@media screen and(min-width: 62em) {
+
+    .site-header {
+        padding: 0;
+    }
+
 }

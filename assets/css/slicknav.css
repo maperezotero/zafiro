@@ -165,20 +165,6 @@
   font-size: 1.em;
 }
 
-/* .slicknav_nav {
-  text-align: left;
-  color: #696969;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  background: #f9f9f9;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  z-index: 111;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-} */
-
 .slicknav_nav {
   text-align: left;
   color: #696969;
