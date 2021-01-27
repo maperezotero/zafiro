@@ -15,7 +15,14 @@
 get_header();
 ?>
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center">
+
+		<?php
+			if ( get_theme_mod( 'zafiro_sidebar_setting', 'left' ) === 'left' ) {
+				get_sidebar();
+			}
+		?>
+
 		<div class="col-md-9">
 
 			<main id="primary" class="site-main">
@@ -57,7 +64,11 @@ get_header();
 
 		</div><!-- .col-md-9 -->
 
-		<?php get_sidebar(); ?>
+		<?php
+			if ( get_theme_mod( 'zafiro_sidebar_setting', 'right' ) === 'right' ) {
+				get_sidebar();
+			}
+		?>
 
 	</div><!-- .row -->
 </div><!-- .container -->		
