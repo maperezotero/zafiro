@@ -18,7 +18,7 @@
   "scripts": {
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indet-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./ --source-map true --output-style compressed",
-    "bundle": "dir-archiver --src . --dest ../zafiro-dist.zip --exclude package.json package-lock.json phpcs.xml.dist README.md style.css.map woocommerce.css.map .gitignore .git node_modules sass",
+    "bundle": "dir-archiver --src . --dest ../zafiro-dist.zip --exclude package.json package-lock.json phpcs.xml.dist README.md style.css.map woocommerce.css.map editor-style.css.map .gitignore .git node_modules sass",
     "bundle:dev": "dir-archiver --src . --dest ../zafiro-dev.zip --exclude style.css.map woocommerce.css.map node_modules"
   }
 }

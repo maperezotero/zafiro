@@ -1,0 +1,51 @@
+/* Gutenberg editor styles */
+@import "abstracts/variables/colors";
+@import "abstracts/variables/typography";
+@import "base/typography/headings";
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wp-block:not(.wp-block[data-align=full]) {
+	max-width: 1115px;
+}
+
+.wp-block-cover.alignfull,
+.wp-block-group.alignfull {
+	width: 100vw;
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw);
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
+
+[class*="__inner-container"] {
+	margin: 0 auto;
+	max-width: 90vw;
+}
+
+@media ( min-width: 576px ) {
+	[class*="__inner-container"] {
+		max-width: 516px;
+	}
+}
+
+@media ( min-width: 768px ) {
+	[class*="__inner-container"] {
+		max-width: 696px;
+	}
+}
+
+@media ( min-width: 992px ) {
+	[class*="__inner-container"] {
+		max-width: 936px;
+	}
+}
+
+@media ( min-width: 1200px ) {
+	[class*="__inner-container"] {
+		max-width: 1115px;
+	}
+}
+
