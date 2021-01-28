@@ -45,6 +45,9 @@ function zafiro_customize_register( $wp_customize ) {
 	// Blog options
 	include get_template_directory() . '/inc/customizer/custom-blog.php';
 
+	// Footer options
+	include get_template_directory() . '/inc/customizer/custom-footer.php';
+
 }
 add_action( 'customize_register', 'zafiro_customize_register' );
 

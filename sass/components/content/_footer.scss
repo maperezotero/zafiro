@@ -1,4 +1,35 @@
 .site-footer {
+	background: $color__background-footer;
+	color: $color__text-footer;
     @include paddingbottom(1);
-    @include paddingtop(1);
+	@include paddingtop(3);
+
+	a,
+	a:visited {
+		color: $color__link-footer;
+	}
+
+	a:hover {
+		color: $color__link-footer-hover;
+	}
+	
+	.widget-title {
+		color: $color__text-footer;
+	}
+}
+
+.copy {
+	background-color: $color__backgorund-copy;
+	color: $color__text-copy;
+	font-size: .95rem;
+	@include paddingbottom(1);
+	@include paddingtop(1);
+
+	a,
+	a:visited {
+		color: $color__link-copy;
+	}
+	a:hover {
+		color: $color__link-copy-hover;
+	}
 }

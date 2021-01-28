@@ -12,6 +12,21 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+
+		<div class="container">
+			<div class="row">
+
+				<?php 
+					$num_columns = get_theme_mod( 'zafiro_footer_setting', '4' );
+					echo zafiro_footer_columns( $num_columns ); 
+				?>
+						
+			</div><!-- .row -->
+		</div><!-- .container -->
+
+	</footer><!-- #colophon -->
+
+	<div id="mapo" class="copy">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -31,7 +46,8 @@
 				</div><!-- .col-md-12 -->
 			</div><!-- .row -->
 		</div><!-- .container -->	
-	</footer><!-- #colophon -->
+	</div><!-- .copy -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

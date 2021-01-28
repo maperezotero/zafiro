@@ -7,6 +7,13 @@
 // 	margin: 0 0 1.5em;
 // }
 
+.site-main {
+	@include marginbottom(3);
+	&.page-builder {
+		@include marginbottom(0);
+	}
+}
+
 .archive,
 .blog,
 .error404,
@@ -44,6 +51,10 @@
 .entry-content,
 .entry-summary {
 	margin: 1em 0 0;
+	font-size: 1.125rem;
+	&.page-builder {
+		margin-top: 0;
+	}
 }
 
 .read-more-link {
@@ -69,7 +80,7 @@
 }
 
 .entry-content,
-.entry-content-builder {
+.entry-content .page-builder {
 	h1, h2, h3 {
 		margin-bottom: $global__vertical-spacing;
 		margin-bottom: calc(#{$global__vertical-spacing} / 2);

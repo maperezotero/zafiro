@@ -11,7 +11,7 @@ get_header();
 		<div class="row">
 			<div class="col-md-12">
 
-				<main id="primary-builder" class="site-main">
+				<main id="primary" class="site-main page-builder">
 
 					<?php
 					while ( have_posts() ) :
@@ -20,7 +20,7 @@ get_header();
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-							<div class="entry-content-builder">
+							<div class="entry-content page-builder">
 								<?php the_content(); ?>
 							</div><!-- .entry-content -->
 
