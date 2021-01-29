@@ -159,6 +159,20 @@ function zafiro_scripts() {
 add_action( 'wp_enqueue_scripts', 'zafiro_scripts' );
 
 /**
+ * Gutenberg scripts and styles
+ */
+function zafiro_gutenberg_scripts() {
+	wp_enqueue_script( 
+		'zafiro-editor', 
+		get_stylesheet_directory_uri() . '/assets/js/editor.js', 
+		array( 'wp-blocks', 'wp-dom' ), 
+		filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), 
+		true 
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'zafiro_gutenberg_scripts' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
