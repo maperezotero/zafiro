@@ -4438,7 +4438,7 @@ input,
 select,
 optgroup,
 textarea {
- color: #404040;
+ color: #12232e;
  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
  font-size: 1rem;
  line-height: 1.5;
@@ -4452,7 +4452,7 @@ h5,
 h6 {
  clear: both;
  font-weight: 600;
- color: #454c56;
+ color: #203647;
 }
 
 h1 {
@@ -4495,7 +4495,7 @@ address {
 }
 
 pre {
- background: #eee;
+ background: #eefbfb;
  font-family: "Courier 10 Pitch", courier, monospace;
  line-height: 1.6;
  margin-bottom: 1.6em;
@@ -4519,7 +4519,7 @@ acronym {
 
 mark,
 ins {
- background: #fff9c0;
+ background: #ffff20;
  text-decoration: none;
 }
 
@@ -4538,7 +4538,7 @@ body {
 }
 
 hr {
- background-color: #ccc;
+ background-color: #eefbfb;
  border: 0;
  height: 1px;
  margin-bottom: 1.5em;
@@ -4595,17 +4595,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
- color: #3b5ec7;
+ color: #007cc7;
  text-decoration: none;
  transition: all .3s ease;
 }
 
 a:visited {
- color: #3b5ec7;
+ color: #007cc7;
 }
 
 a:hover, a:focus, a:active {
- color: #191970;
+ color: #4da8da;
 }
 
 a:focus {
@@ -4875,16 +4875,15 @@ textarea {
 }
 
 .entry-title {
- font-family: 'Noto Serif', serif;
  margin-top: calc(1em / 4);
 }
 
 .entry-title a, .entry-title a:visited {
- color: #454c56;
+ color: #203647;
 }
 
 .entry-title a:hover {
- color: #2f131e;
+ color: #007cc7;
 }
 
 .page-content,
@@ -4898,6 +4897,12 @@ textarea {
 .entry-content.page-builder,
 .entry-summary.page-builder {
  margin-top: 0;
+}
+
+.page-content p > a,
+.entry-content p > a,
+.entry-summary p > a {
+ text-decoration: underline;
 }
 
 .read-more-link {
@@ -4974,40 +4979,40 @@ textarea {
 /* Footer
 --------------------------------------------- */
 .site-footer {
- background: #262626;
- color: #999;
+ background: #203647;
+ color: #cad8db;
  padding-bottom: 1em;
  padding-top: 3em;
 }
 
 .site-footer a,
 .site-footer a:visited {
- color: #c4c4c4;
+ color: #eefbfb;
 }
 
 .site-footer a:hover {
- color: #fff;
+ color: #4da8da;
 }
 
 .site-footer .widget-title {
- color: #999;
+ color: #cad8db;
 }
 
 .copy {
- background-color: #212121;
- color: #999;
- font-size: .95rem;
+ background-color: #12232e;
+ color: #8B9CA4;
+ font-size: .85rem;
  padding-bottom: 1em;
  padding-top: 1em;
 }
 
 .copy a,
 .copy a:visited {
- color: #727272;
+ color: #8B9CA4;
 }
 
 .copy a:hover {
- color: #fff;
+ color: #dceaeb;
 }
 
 /* Media

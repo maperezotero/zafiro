@@ -37,7 +37,6 @@
 }
 
 .entry-title {
-	font-family: 'Noto Serif', serif;
 	margin-top: calc(#{$global__vertical-spacing} / 4);
 	a, a:visited {
 		color: $color__entry-title;
@@ -54,6 +53,9 @@
 	font-size: 1.125rem;
 	&.page-builder {
 		margin-top: 0;
+	}
+	p > a {
+		text-decoration: underline;
 	}
 }
 

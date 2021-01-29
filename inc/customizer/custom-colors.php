@@ -6,45 +6,69 @@
  * @since 1.0.0
  */
 
- /* Colors Section */
- $wp_customize->add_section( 'zafiro_colors_section', array(
-	'title' => __( 'Theme Colors', 'zafiro' ),
+/* Colors Section */
+$wp_customize->add_section( 'zafiro_colors_section', array(
+	'title'    => __( 'Theme Colors', 'zafiro' ),
 	'priority' => 1,
-	'panel' => 'zafiro_theme_options_panel'
- ) );
-
-/* Header Background Color */
-$wp_customize->add_setting( 'zafiro_header_bg_color', array(
-	'default'            => '#ffffff',
-	'sanitize_callback' => 'sanitize_hex_color',
+	'panel'    => 'zafiro_theme_options_panel',
 ) );
 
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'zafiro_header_bg_color', array(
-	'label'   => __( 'Header Background Color', 'zafiro' ),
-	'section' => 'zafiro_colors_section',
-	'setting' => 'zafiro_header_bg_color',
-) ) );
+// Header
+$colors[] = array(
+	'slug'    => 'zafiro_header_bg_color',
+	'default' => '#fff',
+	'label'   => 'Header Background Color',
+);
 
-/* Header Links Color */
-$wp_customize->add_setting( 'zafiro_header_color', array(
-	'default'            => '#404040',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
+$colors[] = array(
+	'slug'    => 'zafiro_header_color',
+	'default' => '#12232e',
+	'label'   => 'Header Links Color',
+);
 
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'zafiro_header_color', array(
-	'label'   => __( 'Header Links Color', 'zafiro' ),
-	'section' => 'zafiro_colors_section',
-	'setting' => 'zafiro_header_color',
-) ) );
+$colors[] = array(
+	'slug'    => 'zafiro_header_hover_color',
+	'default' => '#cad8db',
+	'label'   => 'Header Links Hover Color',
+);
 
-/* Header Links Hover Color */
-$wp_customize->add_setting( 'zafiro_header_hover_color', array(
-	'default'            => '#cccccc',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
+// Footer
+$colors[] = array(
+	'slug'    => 'zafiro_footer_bg_color',
+	'default' => '#203647',
+	'label'   => 'Footer Background Color',
+);
 
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'zafiro_header_hover_color', array(
-	'label'   => __( 'Header Links Hover Color', 'zafiro' ),
-	'section' => 'zafiro_colors_section',
-	'setting' => 'zafiro_header_hover_color',
-) ) );
+$colors[] = array(
+	'slug'    => 'zafiro_footer_color',
+	'default' => '#cad8db',
+	'label'   => 'Footer Links Color',
+);
+
+$colors[] = array(
+	'slug'    => 'zafiro_footer_hover_color',
+	'default' => '#4da8da',
+	'label'   => 'Footer Links Hover Color',
+);
+
+
+
+/**
+ * Add the settings and controls for each color
+ */
+foreach( $colors as $color ) {
+
+	// Settings
+	$wp_customize->add_setting( $color['slug'], array(
+		'default' => $color['default'],
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Controls
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $color['slug'], array(
+		'label'   => __( $color['label'], 'zafiro' ),
+		'section' => 'zafiro_colors_section',
+		'setting' => $color['slug'],
+	) ) );
+
+}

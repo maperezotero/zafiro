@@ -94,7 +94,10 @@ function zafiro_theme_customizations() {
 			}
 			.site-header a, .site-header a:visited { color: <?php echo esc_html( $header_color ); ?>; }
             .site-header a:hover, .site-header a:focus { color: <?php echo esc_html( $header_hover_color ); ?>; }
-            .main-navigation ul { background-color: <?php echo esc_attr( $header_bg_color ); ?>; }
+			.main-navigation ul { background-color: <?php echo esc_attr( $header_bg_color ); ?>; }
+			.site-footer { background-color: <?php echo esc_attr( get_theme_mod( 'zafiro_footer_bg_color', '#203647' ) ); ?>; }
+			.site-footer a, .site-footer a:visited { color: <?php echo esc_attr( get_theme_mod( 'zafiro_footer_color', '#cad8db' ) ); ?>; }
+			.site-footer a:hover, .site-footer a:focus { color: <?php echo esc_attr( get_theme_mod( 'zafiro_footer_hover_color', '#4da8da' ) ); ?>; }
 		</style>
 		<!-- End Zafiro Customizer -->
 	<?php

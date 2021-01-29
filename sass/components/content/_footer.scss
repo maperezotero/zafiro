@@ -19,9 +19,9 @@
 }
 
 .copy {
-	background-color: $color__backgorund-copy;
+	background-color: $color__background-copy;
 	color: $color__text-copy;
-	font-size: .95rem;
+	font-size: .85rem;
 	@include paddingbottom(1);
 	@include paddingtop(1);
 
