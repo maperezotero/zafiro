@@ -116,6 +116,63 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/
 		 */
 		add_theme_support( 'align-wide' );
+
+		/**
+		 * Add default font sizes and disable custom font sizes.
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes
+		 */
+		add_theme_support( 'disable-custom-font-sizes' );
+		
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' => esc_attr__( 'Small', 'zafiro' ),
+				'size' => 14,
+				'slug' => 'small',
+			),
+			array(
+				'name' => esc_attr__( 'Normal', 'zafiro' ),
+				'size' => 16,
+				'slug' => 'normal',
+			),
+			array(
+				'name' => esc_attr__( 'Bigger', 'zafiro' ),
+				'size' => 18,
+				'slug' => 'bigger',
+			),
+			array(
+				'name' => esc_attr__( 'Medium', 'zafiro' ),
+				'size' => 24,
+				'slug' => 'medium',
+			),
+			array(
+				'name' => esc_attr__( 'Large', 'zafiro' ),
+				'size' => 32,
+				'slug' => 'large',
+			),
+			array(
+				'name' => esc_attr__( 'Huge', 'zafiro' ),
+				'size' => 40,
+				'slug' => 'huge',
+			),
+			array(
+				'name' => esc_attr__( 'Giant', 'zafiro' ),
+				'size' => 60,
+				'slug' => 'giant',
+			),
+			array(
+				'name' => esc_attr__( 'Monster', 'zafiro' ),
+				'size' => 80,
+				'slug' => 'monster',
+			),
+		) );
+
+		/**
+		 * Support for using other units appart from px to define sizes, paddings... (px, em, rem, vh, vw)
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#support-custom-units 
+		 */
+		add_theme_support( 'custom-units' );
 	}
 endif;
 add_action( 'after_setup_theme', 'zafiro_setup' );
@@ -171,6 +228,11 @@ function zafiro_gutenberg_scripts() {
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'zafiro_gutenberg_scripts' );
+
+/**
+ * Zafiro custom block patterns
+ */
+require get_template_directory() . '/inc/block-patterns/hero-pattern.php';
 
 /**
  * Implement the Custom Header feature.

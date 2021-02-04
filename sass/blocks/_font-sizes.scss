@@ -1,0 +1,76 @@
+// Gutenberg custom font sizes
+
+.has-small-font-size {
+	font-size: 0.875rem;
+	line-height: 1.923;
+}
+
+.has-normal-font-size {
+	font-size: 1rem;
+	line-height: 1.875;
+}
+
+.has-bigger-font-size {
+	font-size: 1.125rem;
+	line-height: 1.8;
+}
+
+.has-medium-font-size {
+	font-size: 1.5rem;
+	line-height: 1.3;
+}
+
+.has-large-font-size {
+	font-size: 1.875rem;
+	line-height: 1.3;
+}
+
+.has-huge-font-size {
+	font-size: 2.2rem;
+	line-height: 1.25;
+}
+
+.has-giant-font-size {
+	font-size: 2.6rem;
+	line-height: 1.15;
+}
+
+.has-monster-font-size {
+	font-size: 3rem;
+	line-height: 1.15;
+}
+
+@media only screen and (min-width: 768px) {
+	.has-monster-font-size {
+		font-size: 5rem;
+		line-height: 1.15;
+	}
+	.has-giant-font-size {
+		font-size: 3.75rem;
+		line-height: 1.15;
+	}
+	.has-huge-font-size {
+		font-size: 2.625rem;
+		line-height: 1.2;
+	}
+	.has-large-font-size {
+		font-size: 2rem;
+		line-height: 1.3;
+	}
+	.has-medium-font-size {
+		font-size: 1.625rem;
+		line-height: 1.4;
+	}
+	.has-bigger-font-size {
+		font-size: 1.25rem;
+		line-height: 1.55;
+	}
+	.has-normal-font-size {
+		font-size: 1rem;
+		line-height: 1.875;
+	}
+	.has-small-font-size {
+		font-size: .813rem;
+		line-height: 1.923;
+	}
+}
