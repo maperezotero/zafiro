@@ -13,6 +13,23 @@
 	'panel'       => 'zafiro_theme_options_panel',
 ) );
 
+$wp_customize->add_setting( 'zafiro_footer_layout_setting', array(
+	'default'              => 'default',
+	'sanitize_callback'    => 'esc_html',
+) );
+
+$wp_customize->add_control( 'zafiro_footer_layout_control', array(
+	'label' => esc_html__( 'Footer Layout', 'zafiro' ),
+	'section' => 'zafiro_footer_section',
+	'settings' => 'zafiro_footer_layout_setting',
+	'type' => 'select',
+	'choices' => array(
+		'default' => __( 'Default 4 columns', 'zafiro' ),
+		'left' => __( '3 columns 2+1+1', 'zafiro' ),
+		'right' => __( '3 columns 1+1+2', 'zafiro' )
+	),
+) );
+
 $wp_customize->add_setting( 'zafiro_footer_setting', array(
 	'default'              => 4,
 	'sanitize_callback'    => 'esc_html',
@@ -28,4 +45,13 @@ $wp_customize->add_control( 'zafiro_footer_control', array(
 		3 => __( '3', 'zafiro' ),
 		2 => __( '2', 'zafiro' ),
 	),
+	'active_callback' => 'zafiro_footer_layout_active_callback',
 ) );
+
+function zafiro_footer_layout_active_callback( $control ){
+	if ( $control->manager->get_setting( 'zafiro_footer_layout_setting' )->value() === 'default' ) {
+		return true;
+	} else {
+		return false;
+	}
+}

@@ -11,24 +11,10 @@
 
 ?>
 
-<?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) : ?>
-
-	<footer id="colophon" class="site-footer">
-
-		<div class="container">
-			<div class="row">
-
-				<?php 
-					$num_columns = get_theme_mod( 'zafiro_footer_setting', '4' );
-					echo zafiro_footer_columns( $num_columns ); 
-				?>
-						
-			</div><!-- .row -->
-		</div><!-- .container -->
-
-	</footer><!-- #colophon -->
-
-<?php endif; ?>
+	<?php
+		$footer_layout = get_theme_mod( 'zafiro_footer_layout_setting', 'default' );
+		get_template_part( 'template-parts/footer/footer', $footer_layout );
+	?>
 
 	<div id="mapo" class="copy">
 		<div class="container">
