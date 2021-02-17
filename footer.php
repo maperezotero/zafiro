@@ -11,6 +11,8 @@
 
 ?>
 
+<?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) : ?>
+
 	<footer id="colophon" class="site-footer">
 
 		<div class="container">
@@ -25,6 +27,8 @@
 		</div><!-- .container -->
 
 	</footer><!-- #colophon -->
+
+<?php endif; ?>
 
 	<div id="mapo" class="copy">
 		<div class="container">

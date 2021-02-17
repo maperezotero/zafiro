@@ -173,6 +173,20 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#support-custom-units 
 		 */
 		add_theme_support( 'custom-units' );
+
+		/**
+		 * Support for custom line heights
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#supporting-custom-line-heights
+		 */
+		add_theme_support( 'custom-line-height' );
+
+		/**
+		 * Support for responsive embeds
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content
+		 */
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'zafiro_setup' );

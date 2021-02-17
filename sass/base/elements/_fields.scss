@@ -15,9 +15,9 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
+	border: 1px solid $color__accent-secondary-color;
+	padding: .625rem;
+	margin-top: .3125rem;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -30,4 +30,8 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+form.search-form {
+	display: flex;
 }
