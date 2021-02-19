@@ -5,3 +5,5 @@ composer.lock
 .DS_Store
 *.bak
 *.ori
+style.css
+style.css.map

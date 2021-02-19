@@ -13,7 +13,7 @@ get_header();
 	<div class="row justify-content-center">
 
 		<?php
-			if ( get_theme_mod( 'zafiro_sidebar_setting', 'left' ) === 'left' ) {
+			if ( get_theme_mod( 'zafiro_sidebar_setting' ) === 'left' ) {
 				get_sidebar();
 			}
 		?>

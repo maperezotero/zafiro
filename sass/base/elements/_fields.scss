@@ -32,6 +32,37 @@ textarea {
 	width: 100%;
 }
 
-form.search-form {
-	display: flex;
+.search-form {
+	position: relative;
+
+	input {
+		width: 100%;
+		// border: 1px solid $color__border-input;
+		margin-top: 0;
+		padding: 10px 5px;
+		padding-right: 55px;
+		font-size: 1rem;
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		height: 100%;
+		right: 0;
+		top: 0;
+		margin-top: 0;
+		border: none;
+		width: 50px;
+		color: #b7b7b7;
+		background-color: $color__accent-color;
+		cursor: pointer;
+	}
+
+	svg {
+		fill: #fff;
+		height: 2rem;
+		width: 2rem;
+	}
 }
