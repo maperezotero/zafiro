@@ -1,45 +1,46 @@
 // Color palette from coolors
 // https://coolors.co/12232e-007cc7-4da8da-203647-eefbfb
-$color__gunmetal: #12232e;
-$color__charcoal: #203647;
-$color__cadet_grey: #8B9CA4;
-$color__light_grey: #cad8db;
-$color__star_command_blue: #007cc7; // Accent color
-$color__accent-color: $color__star_command_blue;
-$color__carolina_blue: #4da8da;
-$color__accent-secondary-color: $color__carolina_blue;
-$color__azure: #dceaeb;
-$color__azure_light: #eefbfb;
+
+$color__main: #12232e; // gunmetal
+$color__secondary: #203647; // charcoal
+$color__accent: #007cc7; // start-command-blue
+$color__accent-hover: darken($color__accent, 10%);
+$color__accent-secondary: #4da8da; // carolina-blue
+$color__gray-light: #8b9ca4;
+$color__gray-lighter: #eefbfb;
+$color__gray-dark: #586971;
+$color__green: #28a745;
+$color__orange: #ff4500;
+$color__red: #ed3330;
 
 $color__background-body: #fff;
 $color__background-header: #fff;
 $color__background-screen: #f1f1f1; // screen readers
-$color__background-hr: $color__azure_light;
-$color__background-pre: $color__azure_light;
+$color__background-hr: $color__gray-lighter;
+$color__background-pre: $color__gray-lighter;
 $color__background-ins: #ffff20;
 $color__background-button: #e6e6e6;
-$color__background-footer: $color__charcoal;
-$color__background-copy: $color__gunmetal;
+$color__background-footer: $color__secondary;
+$color__background-copy: $color__main;
 
 $color__text-screen: #21759b; // screen readers
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__text-main: $color__gunmetal;
-$color__text-headings: $color__charcoal;
-$color__text-footer: $color__light_grey;
-$color__text-copy: $color__cadet_grey;
+$color__text-main: $color__main;
+$color__text-headings: $color__secondary;
+$color__text-footer: $color__gray-lighter;
+$color__text-copy: $color__gray-light;
 
-$color__link: $color__star_command_blue;
-$color__link-visited: $color__star_command_blue;
-$color__link-hover: $color__carolina_blue;
-$color__link-footer: $color__azure_light;
-$color__link-footer-hover: $color__light_grey;
-$color__link-footer-hover: $color__carolina_blue;
-$color__link-copy: $color__cadet_grey;
-$color__link-copy-hover: $color__azure;
+$color__link: $color__accent;
+$color__link-visited: $color__accent;
+$color__link-hover: $color__accent-hover;
+$color__link-footer: $color__gray-lighter;
+$color__link-footer-hover: $color__gray-light;
+$color__link-copy: $color__gray-light;
+$color__link-copy-hover: $color__gray-lighter;
 
-$color__entry-title: $color__charcoal;
-$color__entry-title-hover: $color__star_command_blue;
+$color__entry-title: $color__secondary;
+$color__entry-title-hover: $color__accent;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

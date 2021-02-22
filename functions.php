@@ -1,6 +1,6 @@
 <?php
 /**
- * zafiro functions and definitions
+ * Zafiro functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ZAFIRO_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ZAFIRO_VERSION', '1.0.0' );
+	define( 'ZAFIRO_VERSION', wp_get_theme()->get( 'Version' ) );
 }
 
 if ( ! function_exists( 'zafiro_setup' ) ) :
@@ -72,15 +72,19 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
+		/**
+		 * Add support for core custom logo.
+		 * 
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
 		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'zafiro_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
+			'custom_logo',
+			array(
+				'height'               => 40,
+				'width'                => 250,
+				'flex-height'          => true,
+				'flex-width'           => true,
+				'unlink-homepage-logo' => true,
 			)
 		);
 
@@ -88,22 +92,34 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
+		 * Set up the WordPress core custom background feature.
 		 */
 		add_theme_support(
-			'custom-logo',
-			array(
-				'height'      => 250,
-				'width'       => 250,
-				'flex-width'  => true,
-				'flex-height' => true,
+			'custom-background',
+			apply_filters(
+				'zafiro_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+				)
 			)
 		);
 
 		/**
-		 * Add support for Gutenberg editor styles
+		 * Add support for block styles.
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles
+		 */
+		add_theme_support( 'wp-block-styles' );
+
+		/**
+		 * Add support for full and wide align in Gutenberg blocks that support this feature.
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+		 */
+		add_theme_support( 'align-wide' );
+
+		/**
+		 * Add support for Gutenberg editor styles.
 		 * 
 		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles
 		 */
@@ -111,18 +127,11 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 		add_editor_style( 'editor-style.css' );
 
 		/**
-		 * Add support for Gutenberg blocks.
-		 * 
-		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/
-		 */
-		add_theme_support( 'align-wide' );
-
-		/**
 		 * Add default font sizes and disable custom font sizes.
 		 * 
 		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes
 		 */
-		add_theme_support( 'disable-custom-font-sizes' );
+		// add_theme_support( 'disable-custom-font-sizes' );  // Uncomment to allow disable custom font sizes
 		
 		add_theme_support( 'editor-font-sizes', array(
 			array(
@@ -168,25 +177,119 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 		) );
 
 		/**
-		 * Support for using other units appart from px to define sizes, paddings... (px, em, rem, vh, vw)
-		 * 
-		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#support-custom-units 
+		 * Editor color custom palette colors.
 		 */
-		add_theme_support( 'custom-units' );
+		// Colors
+		$color__main             = '#12232e';
+		$color__secondary        = '#203647';
+		$color__accent           = '#007cc7';
+		$color__accent_secondary = '#4da8da';
+		$color__gray_dark        = '#586971';
+		$color__gray_light       = '#8b9ca4';
+		$color__gray_lighter     = '#eefbfb';
+		$color__red              = '#ed3330';
+		$color__orange           = '#ff4500';
+		$color__green            = '#28a745';
+
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => esc_html( 'Text main', 'zafiro' ),
+					'slug'  => 'text-main',
+					'color' => $color__main,
+				),
+				array(
+					'name'  => esc_html( 'Text secondary', 'zafiro' ),
+					'slug'  => 'text-secondary',
+					'color' => $color__secondary,
+				),
+				array(
+					'name'  => esc_html( 'Gray dark', 'zafiro' ),
+					'slug'  => 'gray-dark',
+					'color' => $color__gray_dark,
+				),
+				array(
+					'name'  => esc_html( 'Gray medium', 'zafiro' ),
+					'slug'  => 'gray-medium',
+					'color' => $color__gray_light,
+				),
+				array(
+					'name'  => esc_html( 'Gray light', 'zafiro' ),
+					'slug'  => 'gray-light',
+					'color' => $color__gray_lighter,
+				),
+				array(
+					'name'  => esc_html( 'Accent', 'zafiro' ),
+					'slug'  => 'accent',
+					'color' => $color__accent,
+				),
+				array(
+					'name'  => esc_html( 'Accent secondary', 'zafiro' ),
+					'slug'  => 'accent-secondary',
+					'color' => $color__accent_secondary,
+				),
+				array(
+					'name'  => esc_html( 'Red', 'zafiro' ),
+					'slug'  => 'red',
+					'color' => $color__red,
+				),
+				array(
+					'name'  => esc_html( 'Orange', 'zafiro' ),
+					'slug'  => 'orange',
+					'color' => $color__orange,
+				),
+				array(
+					'name'  => esc_html( 'Green', 'zafiro' ),
+					'slug'  => 'green',
+					'color' => $color__green,
+				),
+			)
+		);
 
 		/**
-		 * Support for custom line heights
+		 * Editor gradient custom presets.
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-gradient-presets
+		 */
+		add_theme_support(
+			'editor-gradient-presets',
+			array(
+				array(
+					'name' => esc_html( 'Blue', 'zafiro' ),
+					'gradient' => 'linear-gradient(160deg,' . $color__accent . ' 0%, ' . $color__accent_secondary . ' 100%)',
+					'slug' => 'blue-lightblue',
+				),
+			)
+		);
+
+		 /**
+		 * Support for responsive embeds.
+		 * 
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content
+		 */
+		add_theme_support( 'responsive-embeds' );
+
+		/**
+		 * Support for custom line heights.
 		 * 
 		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#supporting-custom-line-heights
 		 */
 		add_theme_support( 'custom-line-height' );
 
 		/**
-		 * Support for responsive embeds
+		 * Support for using other units appart from px to define sizes, paddings... (px, em, rem, vh, vw).
 		 * 
-		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#support-custom-units 
 		 */
-		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'custom-units' );
+
+		// Add support for experimental link color control.
+		add_theme_support( 'experimental-link-color' );
+
+		// Add support for experimental cover block spacing.
+		add_theme_support( 'custom-spacing' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'zafiro_setup' );

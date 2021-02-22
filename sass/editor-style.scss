@@ -1,5 +1,6 @@
 /* Gutenberg editor styles */
 @import "abstracts/variables/colors";
+@import "blocks/palette";
 @import "abstracts/variables/typography";
 @import "base/typography/headings";
 
@@ -52,4 +53,3 @@ body {
 		max-width: 1115px;
 	}
 }
-

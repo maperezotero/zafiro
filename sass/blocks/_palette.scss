@@ -1,0 +1,32 @@
+// Custom editor palette colors
+
+$colors: (
+	'text-main'       : $color__main,
+	'text-secondary'  : $color__secondary,
+	'gray-dark'       : $color__gray-dark,
+	'gray-medium'     : $color__gray-light,
+	'gray-light'      : $color__gray-lighter,
+	'accent'          : $color__accent,
+	'accent-secondary': $color__accent-secondary,
+	'red'             : $color__red,
+	'orange'          : $color__orange,
+	'green'           : $color__green,
+);
+
+@each $name, $color in $colors {
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+		&:hover {
+			background-color: darken($color, 10%);
+		}
+	}
+}
+      
+// Gradients custom colors
+.has-blue-lightblue-gradient-background {
+	background: linear-gradient(135deg, $color__accent 0%, $color__accent-secondary 100%);
+}
