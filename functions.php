@@ -189,7 +189,7 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 		$color__gray_lighter     = '#eefbfb';
 		$color__red              = '#ed3330';
 		$color__orange           = '#ff4500';
-		$color__green            = '#28a745';
+		$color__green            = '#16a2bb';
 
 		add_theme_support(
 			'editor-color-palette',
@@ -246,23 +246,7 @@ if ( ! function_exists( 'zafiro_setup' ) ) :
 				),
 			)
 		);
-
-		/**
-		 * Editor gradient custom presets.
-		 * 
-		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-gradient-presets
-		 */
-		add_theme_support(
-			'editor-gradient-presets',
-			array(
-				array(
-					'name' => esc_html( 'Blue', 'zafiro' ),
-					'gradient' => 'linear-gradient(160deg,' . $color__accent . ' 0%, ' . $color__accent_secondary . ' 100%)',
-					'slug' => 'blue-lightblue',
-				),
-			)
-		);
-
+	
 		 /**
 		 * Support for responsive embeds.
 		 * 

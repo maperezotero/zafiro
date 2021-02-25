@@ -30,3 +30,7 @@ $colors: (
 .has-blue-lightblue-gradient-background {
 	background: linear-gradient(135deg, $color__accent 0%, $color__accent-secondary 100%);
 }
+
+.has-red-gradient-background {
+	background: linear-gradient(135deg, $color__red 0%, $color__orange 100%);
+}
