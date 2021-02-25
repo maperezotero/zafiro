@@ -33,3 +33,36 @@
 		color: $color__link-copy-hover;
 	}
 }
+
+.site-info {
+	text-align: center;
+}
+
+.copy-menu {
+	ul {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0;
+		width: 100%;
+
+		li {
+			padding-left: 1em;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 62em) {
+	.site-info {
+		text-align: left;
+	}
+	.copy-menu {
+		ul {
+			justify-content: right;
+		}
+	}
+}

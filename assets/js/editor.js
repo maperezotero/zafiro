@@ -10,4 +10,15 @@ wp.domReady( () => {
 			label: 'Extrabold',
 		}
 	] );
+
+	wp.blocks.registerBlockStyle( 'core/button', [
+		{
+			name: 'medium',
+			label: 'Medium'
+		},
+		{
+			name: 'big',
+			label: 'Big Button'
+		}
+	] );
 } );

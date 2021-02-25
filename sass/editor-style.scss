@@ -1,8 +1,11 @@
 /* Gutenberg editor styles */
 @import "abstracts/variables/colors";
-@import "blocks/palette";
 @import "abstracts/variables/typography";
 @import "base/typography/headings";
+@import "blocks/palette";
+@import "blocks/group";
+@import "blocks/font-sizes";
+@import "blocks/buttons";
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;

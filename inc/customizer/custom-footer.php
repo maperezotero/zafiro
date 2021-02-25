@@ -7,7 +7,7 @@
  */
 
  /* Footer Section */
- $wp_customize->add_section( 'zafiro_footer_section', array(
+$wp_customize->add_section( 'zafiro_footer_section', array(
 	'title'       => esc_html__(  'Footer Options', 'zafiro' ),
 	'description' => esc_html__( 'Configure footer options', 'zafiro' ),
 	'panel'       => 'zafiro_theme_options_panel',
@@ -55,3 +55,16 @@ function zafiro_footer_layout_active_callback( $control ){
 		return false;
 	}
 }
+
+/* Copy Section */
+$wp_customize->add_setting( 'zafiro_copy_text_setting', array(
+	'default'              => __( 'Default copy text &copy; 2010', 'zafiro' ),
+	'sanitize_callback'    => 'wp_kses_post',
+) );
+
+$wp_customize->add_control( 'zafiro_copy_text_control', array(
+	'label'    => __( 'Footer copy text: ', 'zafiro' ),
+	'section'  => 'zafiro_footer_section',
+	'settings' => 'zafiro_copy_text_setting',
+	'type'     => 'textarea',
+) );
