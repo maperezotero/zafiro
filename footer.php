@@ -30,6 +30,7 @@
 							wp_nav_menu( array( 
 								'theme_location' => 'menu-2',
 								'container' => '',
+								'fallback_cb' => false,
 							) ); 
 						?>
 					</div>
